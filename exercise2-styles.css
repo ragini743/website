@@ -1,0 +1,33 @@
+*{
+    margin:0
+}
+.image{
+    object-fit: cover;
+     width: 100%;
+}
+.container{
+    grid-auto-flow:dense;
+    grid-gap: 0.5em;
+    display:grid;
+    grid-template-columns: auto;
+}
+@media (min-width:450px){
+    .container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+@media (min-width:1000px){
+    .container{
+        grid-auto-flow:dense;
+        grid-template-columns:repeat(3 ,auto);
+    }
+    #items{
+        grid-column: 2/4;
+        grid-row: 1/3;
+    }
+    #items3{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+}
